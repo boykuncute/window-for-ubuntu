@@ -34,7 +34,7 @@ sudo ln -s /usr/bin/genisoimage /usr/bin/mkisofs
 sudo mkdir /mediabots /floppy /virtio
 link1_status=$(curl -Is http://sellvirtualcard.online/WS2008R2.iso | grep HTTP | cut -f2 -d" ")
 link2_status=$(curl -Is http://sellvirtualcard.online/WS2008R2.iso | grep HTTP | cut -f2 -d" ")
-#sudo wget -P /mediabots https://archive.org/download/WS2008R2/WS2008R2.iso # Windows Server 2008 R2 
+#sudo wget -P /mediabots http://sellvirtualcard.online/WS2008R2.iso # Windows Server 2008 R2 
 if [ $link1_status = "200" ] ; then 
 	sudo wget -P /mediabots http://sellvirtualcard.online/WS2008R2.iso
 elif [ $link2_status = "200" ] ; then 
